@@ -1,5 +1,6 @@
 package com.example.locallaundryapp.View;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.bumptech.glide.Glide;
 import com.example.locallaundryapp.R;
+import com.example.locallaundryapp.View.AppBodySection.MainBodyActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -24,13 +26,14 @@ public class loginActivity extends AppCompatActivity {
 
 
     TextView TvName, TvGmail;
-    Button logout_button;
+    Button logout_button,main_body;
     ImageView profile_image;
 
     FirebaseAuth firebaseAuth;
 
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,11 +46,15 @@ public class loginActivity extends AppCompatActivity {
         TvGmail = findViewById(R.id.user_gmail);
         logout_button = findViewById(R.id.logout_button);
         profile_image = findViewById(R.id.profile_image);
+        main_body = findViewById(R.id.main_body);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
 
 
+        main_body.setOnClickListener(v -> {
+            startActivity(new Intent(this, MainBodyActivity.class));
+        });
 
         logout_button.setOnClickListener(v -> {
             firebaseAuth.signOut();

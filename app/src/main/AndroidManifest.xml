@@ -16,6 +16,9 @@
         android:theme="@style/Theme.LocalLaundryApp"
         tools:targetApi="31">
         <activity
+            android:name=".View.AppBodySection.MainBodyActivity"
+            android:exported="false" />
+        <activity
             android:name=".View.OnBoarding"
             android:exported="false" />
         <activity
@@ -32,9 +35,7 @@
             android:exported="false" />
         <activity
             android:name=".View.loginActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".View.MainActivity"
             android:exported="false" />

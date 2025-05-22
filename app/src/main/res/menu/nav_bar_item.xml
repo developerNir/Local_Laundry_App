@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <item android:title="Home"
+            android:icon="@drawable/home"
+            android:id="@+id/home_item"
+            android:checkable="true"
+            />
+
+        <item android:title="Price List"
+            android:id="@+id/price_list_item"
+            android:icon="@drawable/ic_buy"
+            android:checkable="true"
+            />
+        <item android:title="Order"
+            android:id="@+id/order_item"
+            android:checkable="true"
+            android:icon="@drawable/setting"
+            />
+        <item android:title="Chat"
+            android:id="@+id/chat_item"
+            android:icon="@drawable/chat"
+            android:checkable="true"
+            />
+        <item android:title="Profile"
+            android:id="@+id/profile_item"
+            android:checkable="true"
+            android:icon="@drawable/three_user"
+            />
+
+</menu>

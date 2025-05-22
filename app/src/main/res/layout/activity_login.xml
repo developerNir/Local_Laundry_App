@@ -38,4 +38,10 @@
         android:layout_height="wrap_content"
         android:text="@string/logyou_button"
         />
+    <Button
+        android:id="@+id/main_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="main_body"
+        />
 </LinearLayout>
