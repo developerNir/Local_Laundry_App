@@ -15,4 +15,19 @@
     <string name="hello_greeting">হ্যালো</string>
     <string name="logyou_button">লগআউট</string>
 
+
+
+<!--    On Boarding Bangal data-->
+    <string name="getStart">চলুন শুরু করি</string>
+    <string name="Skip">এড়িয়ে যান</string>
+
+    <string name="headerOne">পিক আপ</string>
+    <string name="headerTwo">ধোয়া</string>
+    <string name="headerTree">ডেলিভারি</string>
+
+    <!-- description  -->
+    <string name="desOne">সেরা লন্ড্রি সার্ভিস পেতে এক ক্লিক করুন।</string>
+    <string name="desTwo">পেশাদার এবং স্বাস্থ্যসম্মত লন্ড্রি পদ্ধতি</string>
+    <string name="desTree">অনুরোধ করলে ৪৮ ঘন্টার মধ্যে এক্সপ্রেস ডেলিভারি।</string>
+
 </resources>
