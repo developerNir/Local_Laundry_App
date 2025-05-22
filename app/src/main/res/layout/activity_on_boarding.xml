@@ -27,7 +27,6 @@
             android:backgroundTint="#00000000"
             android:text="@string/Skip"
             android:textSize="20sp"
-            android:drawableEnd="@drawable/back_arrow"
             android:textStyle="bold"
             android:drawablePadding="10dp"
             android:textColor="@color/Blue"
@@ -76,7 +75,7 @@
                 android:paddingBottom="50dp"
                 android:padding="20dp"
                 android:contentDescription="@string/desOne"
-                android:drawableEnd="@drawable/back_arrow"
+                android:drawableEnd="@drawable/baseline_arrow_forward_24"
                 android:background="#00FFFFFF"
                 />
 

@@ -11,6 +11,13 @@
     <string name="name_hint">আপনার নাম লিখুন</string>
 
 
+<!--    Register Activity-->
+
+    <string name="trams_condition">চালিয়ে যাও ক্লিক করার মাধ্যমে, আপনি আমাদের শর্তাবলী ও নীতিমালা মেনে নিচ্ছেন।</string>
+    <string name="create_account">অ্যাকাউন্ট তৈরি করুন</string>
+
+
+
 <!--    login activity-->
     <string name="hello_greeting">হ্যালো</string>
     <string name="logyou_button">লগআউট</string>
