@@ -1,6 +1,7 @@
 package com.example.locallaundryapp.View;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -12,15 +13,18 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.bumptech.glide.Glide;
 import com.example.locallaundryapp.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.net.URI;
+
 public class loginActivity extends AppCompatActivity {
 
 
-    TextView name, gmail;
-    Button logout;
+    TextView TvName, TvGmail;
+    Button logout_button;
     ImageView profile_image;
 
     FirebaseAuth firebaseAuth;
@@ -35,9 +39,9 @@ public class loginActivity extends AppCompatActivity {
 
 
 
-        name = findViewById(R.id.user_name);
-        gmail = findViewById(R.id.user_gmail);
-        logout = findViewById(R.id.logout_button);
+        TvName = findViewById(R.id.user_name);
+        TvGmail = findViewById(R.id.user_gmail);
+        logout_button = findViewById(R.id.logout_button);
         profile_image = findViewById(R.id.profile_image);
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -45,6 +49,13 @@ public class loginActivity extends AppCompatActivity {
 
 
 
+        logout_button.setOnClickListener(v -> {
+            firebaseAuth.signOut();
+
+            startActivity(new Intent(this, RegisterActivity.class));
+            finish();
+
+        });
 
 
     }
@@ -57,6 +68,15 @@ public class loginActivity extends AppCompatActivity {
 
         if (firebaseUser != null){
 //            there is user login
+            String name = firebaseUser.getDisplayName();
+            String gmail = firebaseUser.getEmail();
+            Uri image = firebaseUser.getPhotoUrl();
+
+
+            TvName.setText(name);
+            TvGmail.setText(gmail);
+            Glide.with(this).load(image).into(profile_image);
+
 
         }else {
 //             There is no any user login here

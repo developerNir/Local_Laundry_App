@@ -41,6 +41,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+//    glied
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+
+
+
+//    google ---------------- firebase and Auth
     implementation("com.google.firebase:firebase-analytics")
     implementation(platform("com.google.firebase:firebase-bom:33.13.0"))
     implementation("com.google.firebase:firebase-auth")
