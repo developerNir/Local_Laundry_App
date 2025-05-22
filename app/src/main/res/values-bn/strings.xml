@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Local Laundry App</string>
+
+
+    <string name="Change_language">ভাষা পরিবর্তন</string>
+    <string name="Choose_language">ভাষা নির্বাচন করুন</string>
+    <string name="get_started">শুরু করুন</string>
+    <string name="login_title">লগইন</string>
+    <string name="name_label">নাম</string>
+    <string name="name_hint">আপনার নাম লিখুন</string>
+
+
+<!--    login activity-->
+    <string name="hello_greeting">হ্যালো</string>
+    <string name="logyou_button">লগআউট</string>
+
+</resources>
