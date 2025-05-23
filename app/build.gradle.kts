@@ -43,6 +43,8 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 //    glied
     implementation ("com.github.bumptech.glide:glide:4.16.0")
+//    android volliy
+    implementation("com.android.volley:volley:1.2.1")
 
 
 
