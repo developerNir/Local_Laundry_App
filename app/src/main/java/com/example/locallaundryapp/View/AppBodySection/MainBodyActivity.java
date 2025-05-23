@@ -22,7 +22,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.locallaundryapp.R;
+import com.example.locallaundryapp.View.Fragments.ChatFregment;
 import com.example.locallaundryapp.View.Fragments.HomeFragment;
+import com.example.locallaundryapp.View.Fragments.OrderFragment;
+import com.example.locallaundryapp.View.Fragments.profileFragment;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -117,17 +120,29 @@ public class MainBodyActivity extends AppCompatActivity {
 // Bottom Navigation Bar------------------------------------------------------------
         BottomNavigationView bottomNav = findViewById(R.id.bottom_nav_view);
         bottomNav.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.home_item){
+            int id = item.getItemId();
 
+            if (id == R.id.home_item){
+                fragmentReplace(new HomeFragment());
                 Toast.makeText(this, "this is Home", Toast.LENGTH_SHORT).show();
-
-
-                    return true;
-                } else if (item.getItemId() == R.id.price_list_item) {
+                return true;
+            } else if (id == R.id.price_list_item) {
+                fragmentReplace(new profileFragment());
                 Toast.makeText(this, "this is Price List", Toast.LENGTH_SHORT).show();
                 return true;
-
-            }else {
+            } else if (id == R.id.order_item) {
+                fragmentReplace(new OrderFragment());
+                Toast.makeText(this, "this is Price List", Toast.LENGTH_SHORT).show();
+                return true;
+            }  else if (id == R.id.chat_item) {
+                fragmentReplace(new ChatFregment());
+                Toast.makeText(this, "this is Price List", Toast.LENGTH_SHORT).show();
+                return true;
+            } else if (id == R.id.profile_item) {
+                fragmentReplace(new profileFragment());
+                Toast.makeText(this, "this is Price List", Toast.LENGTH_SHORT).show();
+                return true;
+            } else {
                 return false;
             }
 
